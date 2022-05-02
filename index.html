@@ -36,14 +36,14 @@
             zoomControl:true, maxZoom:28, minZoom:1
         }).fitBounds([[33.95700567947836,-83.37770950784481],[33.95948307941093,-83.37233984343362]]);
         var hash = new L.Hash(map);
-        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        map.attributionControl.setPrefix('&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
         map.createPane('pane_ESRIWorldTopo_0');
         map.getPane('pane_ESRIWorldTopo_0').style.zIndex = 400;
-        var layer_ESRIWorldTopo_0 = L.tileLayer('http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+        var layer_ESRIWorldTopo_0 = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             pane: 'pane_ESRIWorldTopo_0',
             opacity: 1.0,
             attribution: '',
